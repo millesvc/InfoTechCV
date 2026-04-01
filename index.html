@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InfoTechVC • Informática Moderna</title>
+  <meta name="description" content="Plataforma moderna de cursos de informática con acceso para alumnos, rutas de aprendizaje y experiencia responsive." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-slate-950 text-white">
+  <div class="hero-bg min-h-screen relative overflow-hidden">
+    <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/75 backdrop-blur-xl">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+    
+    <a href="#inicio" class="flex items-center gap-3 shrink-0">
+      <div class="w-11 h-11 rounded-2xl bg-cyan-400/15 border border-cyan-300/25 flex items-center justify-center text-cyan-300 text-xl shrink-0">⚡</div>
+      <div>
+        <p class="text-[11px] uppercase tracking-[0.35em] text-cyan-300/80">InfoTechVC</p>
+        <h1 class="logo-font text-xl sm:text-2xl font-bold leading-none whitespace-nowrap">Informática Moderna</h1>
+      </div>
+    </a>
+
+    <div class="hidden xl:flex items-center gap-7 text-sm font-semibold shrink-0">
+      <a href="#inicio">Inicio</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#recursos">Recursos</a>
+    </div>
+
+    <div class="hidden md:flex items-center gap-3 shrink-0">
+      <button type="button" onclick="openInscripcionModal()" class="btn-secondary whitespace-nowrap">
+        Inscribirse gratis
+      </button>
+      <button type="button" onclick="openLoginModal()" class="btn-primary whitespace-nowrap">
+        Acceso alumnos
+      </button>
+    </div>
+
+    <button
+      id="mobileMenuToggle"
+      type="button"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-2xl border border-white/10 bg-white/5 shrink-0"
+    >
+      <span class="text-2xl">☰</span>
+    </button>
+  </div>
+
+  <div id="mobileMenuPanel" class="hidden md:hidden border-t border-white/10 bg-slate-950/95 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-3">
+      <a class="mobile-nav-link" href="#inicio">Inicio</a>
+      <a class="mobile-nav-link" href="#cursos">Cursos</a>
+      <a class="mobile-nav-link" href="#beneficios">Beneficios</a>
+      <a class="mobile-nav-link" href="#recursos">Recursos</a>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+        <button type="button" onclick="openInscripcionModal()" class="btn-secondary w-full">
+          Inscribirse gratis
+        </button>
+        <button type="button" onclick="openLoginModal()" class="btn-primary w-full">
+          Acceso alumnos
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+      <section id="inicio" class="max-w-7xl mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-14 sm:pb-20 relative z-10">
+        <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
+          <div>
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 text-cyan-300 text-sm font-semibold fade-up">
+              SaaS educativo • Escalable • Producción-ready
+            </span>
+            <h2 class="section-title text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.95] mt-6 fade-up delay-1">
+              Plataforma de aprendizaje en informática diseñada para escalar.
+            </h2>
+            <p class="text-zinc-300 text-lg sm:text-xl leading-8 max-w-2xl mt-6 fade-up delay-2">
+              Plataforma educativa de informática con acceso por roles, progreso persistente y una experiencia moderna pensada para alumnos, formación digital y crecimiento escalable.
+            </p>
+
+            <p class="text-cyan-400 text-sm mt-4 font-semibold fade-up delay-2">
+              Stack: HTML • CSS • JavaScript • Firebase • Responsive UI
+            </p>
+
+            <p class="text-emerald-400 text-sm mt-2 font-semibold fade-up delay-2">
+              +120 alumnos activos • Acceso limitado
+            </p>
+
+            <p class="text-zinc-400 text-sm mt-2 fade-up delay-2">
+              Plataforma en desarrollo activo • Versión Beta
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 mt-8 fade-up delay-3">
+              <button type="button" onclick="openLoginModal()" class="btn-primary text-center">Entrar ahora</button>
+              <button type="button" onclick="openInscripcionModal()" class="btn-secondary text-center">Solicitar inscripción</button>
+            </div>
+
+            <div class="stats fade-up delay-3">
+              <div class="stat-card">
+                <div class="icon">⚙️</div>
+                <h2>3+</h2>
+                <p>Módulos activos</p>
+              </div>
+              <div class="stat-card">
+                <div class="icon">📈</div>
+                <h2>100%</h2>
+                <p>Escalable</p>
+              </div>
+              <div class="stat-card">
+                <div class="icon">🔐</div>
+                <h2>Secure</h2>
+                <p>Acceso protegido</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="fade-left">
+            <div class="rounded-[2rem] border border-white/10 bg-black/30 backdrop-blur-xl p-5 sm:p-6 shadow-2xl">
+              <div class="rounded-[1.5rem] border border-cyan-400/10 bg-slate-950/80 p-5 sm:p-6">
+                <div class="flex items-center justify-between gap-3 mb-6">
+                  <div>
+                    <p class="text-xs uppercase tracking-[0.3em] text-cyan-300/70">Vista previa</p>
+                    <h3 class="text-2xl font-bold">Ecosistema InfoTechVC</h3>
+                  </div>
+                  <span class="px-3 py-1 rounded-full bg-emerald-400/10 border border-emerald-400/20 text-emerald-300 text-xs font-bold">ONLINE</span>
+                </div>
+
+                <div class="grid gap-4">
+                  <div class="feature-card rounded-3xl p-5">
+                    <div class="flex items-start justify-between gap-4">
+                      <div>
+                        <p class="text-sm text-cyan-300">Acceso seguro</p>
+                        <h4 class="text-xl font-bold mt-1">Login conectado a Firebase</h4>
+                        <p class="text-zinc-400 mt-2">Profesores y alumnos entran a su panel correcto según rol.</p>
+                      </div>
+                      <div class="feature-icon text-3xl">🔐</div>
+                    </div>
+                  </div>
+
+                  <div class="feature-card rounded-3xl p-5">
+                    <div class="flex items-start justify-between gap-4">
+                      <div>
+                        <p class="text-sm text-violet-300">Rutas</p>
+                        <h4 class="text-xl font-bold mt-1">Cursos con progreso guardado</h4>
+                        <p class="text-zinc-400 mt-2">Web, IA y Ciberseguridad con avance persistente.</p>
+                      </div>
+                      <div class="feature-icon text-3xl">🚀</div>
+                    </div>
+                  </div>
+
+                  <div class="feature-card rounded-3xl p-5">
+                    <div class="flex items-start justify-between gap-4">
+                      <div>
+                        <p class="text-sm text-emerald-300">Responsive</p>
+                        <h4 class="text-xl font-bold mt-1">Diseño sólido en celular</h4>
+                        <p class="text-zinc-400 mt-2">Botones, navbar y modales listos para touch.</p>
+                      </div>
+                      <div class="feature-icon text-3xl">📲</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cursos" class="section-bg py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <p class="text-cyan-300 uppercase tracking-[0.3em] text-xs font-bold">Cursos</p>
+            <h3 class="section-title text-4xl sm:text-5xl font-black mt-4">Rutas disponibles</h3>
+            <p class="text-zinc-400 mt-4 text-lg">Cada acceso está protegido. Si no has iniciado sesión, se abre el login.</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <article class="card-hover rounded-[1.8rem] p-6 fade-up">
+              <div class="text-4xl mb-4">💻</div>
+              <h4 class="text-2xl font-bold">Desarrollo Web</h4>
+              <p class="text-zinc-400 mt-3">HTML, CSS, JavaScript, React y despliegue real.</p>
+              <button type="button" onclick="goToCurso('curso-web.html')" class="btn-primary mt-6">Entrar al curso</button>
+            </article>
+
+            <article class="card-hover rounded-[1.8rem] p-6 fade-up delay-1">
+              <div class="text-4xl mb-4">🤖</div>
+              <h4 class="text-2xl font-bold">Inteligencia Artificial</h4>
+              <p class="text-zinc-400 mt-3">Fundamentos, ML, LLMs y automatización moderna.</p>
+              <button type="button" onclick="goToCurso('curso-ia.html')" class="btn-primary mt-6">Entrar al curso</button>
+            </article>
+
+            <article class="card-hover rounded-[1.8rem] p-6 fade-up delay-2">
+              <div class="text-4xl mb-4">🔐</div>
+              <h4 class="text-2xl font-bold">Ciberseguridad</h4>
+              <p class="text-zinc-400 mt-3">Redes, seguridad defensiva y hacking ético.</p>
+              <button type="button" onclick="goToCurso('curso-ciber.html')" class="btn-primary mt-6">Entrar al curso</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="beneficios" class="py-16 sm:py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="grid lg:grid-cols-3 gap-6">
+            <div class="feature-card rounded-[1.8rem] p-6 fade-right">
+              <h4 class="text-2xl font-bold">Arquitectura escalable</h4>
+              <p class="text-zinc-400 mt-3">
+                Base modular preparada para crecimiento, con separación de lógica,
+                vistas y control de estado en entorno web moderno.
+              </p>
+            </div>
+            <div class="feature-card rounded-[1.8rem] p-6 fade-right delay-1">
+              <h4 class="text-2xl font-bold">Autenticación y control de roles</h4>
+              <p class="text-zinc-400 mt-3">
+                Sistema de acceso con validación por usuario, diferenciación de roles
+                y protección de rutas críticas dentro de la aplicación.
+              </p>
+            </div>
+            <div class="feature-card rounded-[1.8rem] p-6 fade-right delay-2">
+              <h4 class="text-2xl font-bold">Experiencia optimizada</h4>
+              <p class="text-zinc-400 mt-3">
+                Render estable, loader controlado y diseño responsive para garantizar
+                consistencia en mobile y desktop sin pérdida de rendimiento.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="propuesta" class="py-16 sm:py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-3xl mx-auto mb-12 fade-up">
+            <p class="text-cyan-300 uppercase tracking-[0.3em] text-xs font-bold">Propuesta de valor</p>
+            <h3 class="section-title text-4xl sm:text-5xl font-black mt-4">
+              Una plataforma pensada para aprender y avanzar de verdad
+            </h3>
+            <p class="text-zinc-400 mt-4 text-lg">
+              InfoTechVC une contenido práctico, acceso organizado y una experiencia moderna para alumnos que quieren aprender informática con estructura real.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+            <article class="feature-card rounded-[1.8rem] p-6 fade-up">
+              <div class="text-3xl mb-4">💻</div>
+              <h4 class="text-xl font-bold">Contenido aplicado</h4>
+              <p class="text-zinc-400 mt-3">
+                Rutas enfocadas en desarrollo web, inteligencia artificial y ciberseguridad con enfoque útil y profesional.
+              </p>
+            </article>
+
+            <article class="feature-card rounded-[1.8rem] p-6 fade-up delay-1">
+              <div class="text-3xl mb-4">📈</div>
+              <h4 class="text-xl font-bold">Progreso visible</h4>
+              <p class="text-zinc-400 mt-3">
+                Cada alumno puede seguir su avance y continuar su proceso dentro de un panel claro y bien estructurado.
+              </p>
+            </article>
+
+            <article class="feature-card rounded-[1.8rem] p-6 fade-up delay-2">
+              <div class="text-3xl mb-4">🔐</div>
+              <h4 class="text-xl font-bold">Acceso ordenado</h4>
+              <p class="text-zinc-400 mt-3">
+                Sistema con login, roles y rutas protegidas para entregar una experiencia más seria y profesional.
+              </p>
+            </article>
+
+            <article class="feature-card rounded-[1.8rem] p-6 fade-up delay-3">
+              <div class="text-3xl mb-4">📱</div>
+              <h4 class="text-xl font-bold">Experiencia responsive</h4>
+              <p class="text-zinc-400 mt-3">
+                Plataforma lista para funcionar correctamente en notebook, tablet y celular sin perder calidad visual.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="planes" class="section-bg py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-3xl mx-auto mb-12 fade-up">
+            <p class="text-cyan-300 uppercase tracking-[0.3em] text-xs font-bold">Modalidad</p>
+            <h3 class="section-title text-4xl sm:text-5xl font-black mt-4">
+              Acceso flexible según el objetivo del alumno
+            </h3>
+            <p class="text-zinc-400 mt-4 text-lg">
+              InfoTechVC puede presentarse como una plataforma adaptable para distintas etapas de aprendizaje.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-3 gap-6">
+            <article class="card-hover rounded-[1.8rem] p-7 fade-up">
+              <p class="text-cyan-300 text-sm font-semibold">Plan Inicial</p>
+              <h4 class="text-3xl font-black mt-3">Exploración</h4>
+              <p class="text-zinc-400 mt-4">
+                Ideal para alumnos que quieren comenzar, conocer la plataforma y explorar una ruta de aprendizaje.
+              </p>
+              <div class="mt-6 space-y-3 text-zinc-300">
+                <p>• Acceso a ruta principal</p>
+                <p>• Panel de alumno</p>
+                <p>• Seguimiento de progreso</p>
+              </div>
+              <button type="button" onclick="openInscripcionModal()" class="btn-secondary mt-8 w-full">
+                Solicitar acceso
+              </button>
+            </article>
+
+            <article class="card-hover rounded-[1.8rem] p-7 border border-cyan-400/30 shadow-[0_0_25px_rgba(34,211,238,0.10)] fade-up delay-1">
+              <p class="text-cyan-300 text-sm font-semibold">Plan Recomendado</p>
+              <h4 class="text-3xl font-black mt-3">Pro</h4>
+              <p class="text-zinc-400 mt-4">
+                Pensado para alumnos que quieren una experiencia más completa con rutas tecnológicas más sólidas.
+              </p>
+              <div class="mt-6 space-y-3 text-zinc-300">
+                <p>• Desarrollo Web</p>
+                <p>• Inteligencia Artificial</p>
+                <p>• Ciberseguridad</p>
+                <p>• Experiencia completa de plataforma</p>
+              </div>
+              <button type="button" onclick="openInscripcionModal()" class="btn-primary mt-8 w-full">
+                Quiero este plan
+              </button>
+            </article>
+
+            <article class="card-hover rounded-[1.8rem] p-7 fade-up delay-2">
+              <p class="text-cyan-300 text-sm font-semibold">Plan Institucional</p>
+              <h4 class="text-3xl font-black mt-3">Academy</h4>
+              <p class="text-zinc-400 mt-4">
+                Enfocado en proyectos educativos, academias o implementación como plataforma organizada de formación.
+              </p>
+              <div class="mt-6 space-y-3 text-zinc-300">
+                <p>• Base escalable</p>
+                <p>• Gestión por usuarios</p>
+                <p>• Entorno listo para crecer</p>
+              </div>
+              <button type="button" onclick="openInscripcionModal()" class="btn-secondary mt-8 w-full">
+                Consultar modalidad
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="recursos" class="section-bg py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="resource-card rounded-[2rem] border border-cyan-400/15 bg-black/25 backdrop-blur-xl p-6 sm:p-8">
+            <p class="text-cyan-300 uppercase tracking-[0.3em] text-xs font-bold">Estado del sistema</p>
+            <h3 class="text-3xl sm:text-4xl font-black mt-4">Infraestructura lista para escalar producto digital</h3>
+            <p class="text-zinc-400 text-lg mt-4 max-w-3xl">Plataforma funcional con autenticación integrada, control de acceso, persistencia de datos y base preparada para integrar IA, analítica y nuevas funcionalidades sin reestructuración completa.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonios" class="py-16 sm:py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+          <p class="text-cyan-300 uppercase tracking-[0.3em] text-xs font-bold">Experiencia</p>
+          <h3 class="section-title text-4xl sm:text-5xl font-black mt-4 fade-up">
+            Lo que dicen los alumnos
+          </h3>
+
+          <div class="grid md:grid-cols-3 gap-6 mt-12">
+            <div class="feature-card rounded-[1.8rem] p-6 fade-up">
+              <p class="text-zinc-300">
+                “Por primera vez entendí cómo funciona realmente el desarrollo web.”
+              </p>
+              <span class="text-cyan-300 text-sm mt-4 block">— Alumno Web</span>
+            </div>
+
+            <div class="feature-card rounded-[1.8rem] p-6 fade-up delay-1">
+              <p class="text-zinc-300">
+                “La estructura del curso me ayudó a no perderme como en otros cursos.”
+              </p>
+              <span class="text-cyan-300 text-sm mt-4 block">— Alumno IA</span>
+            </div>
+
+            <div class="feature-card rounded-[1.8rem] p-6 fade-up delay-2">
+              <p class="text-zinc-300">
+                “Se siente más profesional que otras plataformas gratuitas.”
+              </p>
+              <span class="text-cyan-300 text-sm mt-4 block">— Alumno Ciber</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section-bg py-16 sm:py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+          <p class="text-cyan-300 uppercase tracking-[0.3em] text-xs font-bold text-center">FAQ</p>
+          <h3 class="section-title text-4xl font-black mt-4 text-center fade-up">
+            Preguntas frecuentes
+          </h3>
+
+          <div class="mt-10 space-y-6">
+            <div class="feature-card p-6 rounded-[1.5rem] fade-up">
+              <h4 class="font-bold text-lg">¿Necesito experiencia previa?</h4>
+              <p class="text-zinc-400 mt-2">No. Puedes comenzar desde cero y avanzar de forma guiada.</p>
+            </div>
+
+            <div class="feature-card p-6 rounded-[1.5rem] fade-up delay-1">
+              <h4 class="font-bold text-lg">¿Cómo accedo a los cursos?</h4>
+              <p class="text-zinc-400 mt-2">Solicitas acceso, recibes tu cuenta y luego ingresas al panel de alumno.</p>
+            </div>
+
+            <div class="feature-card p-6 rounded-[1.5rem] fade-up delay-2">
+              <h4 class="font-bold text-lg">¿Se guarda mi progreso?</h4>
+              <p class="text-zinc-400 mt-2">Sí. El avance queda registrado para que continúes desde el mismo punto.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20 bg-slate-950 border-t border-white/10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+          <p class="text-cyan-300 uppercase tracking-[0.3em] text-xs font-bold">Comienza ahora</p>
+          <h3 class="section-title text-4xl sm:text-5xl font-black mt-4 fade-up">
+            Lleva tu aprendizaje a una plataforma más seria, moderna y escalable
+          </h3>
+          <p class="text-zinc-400 text-lg mt-5 max-w-3xl mx-auto">
+            InfoTechVC está diseñada para ofrecer una experiencia tecnológica limpia, profesional y preparada para crecer junto a sus alumnos.
+          </p>
+
+          <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+            <button type="button" onclick="openInscripcionModal()" class="btn-primary">
+              Solicitar inscripción
+            </button>
+            <button type="button" onclick="openLoginModal()" class="btn-secondary">
+              Acceso alumnos
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="py-10 text-center text-zinc-500 text-sm border-t border-white/10 bg-slate-950">
+        © 2026 InfoTechVC • Plataforma de aprendizaje en informática
+      </footer>
+    </main>
+  </div>
+
+  <div id="loginModal" class="hidden fixed inset-0 z-[90] items-center justify-center bg-black/70 px-4">
+    <div class="w-full max-w-md rounded-[2rem] border border-cyan-400/20 bg-slate-950/95 p-6 sm:p-7 shadow-2xl modal-anim">
+      <div id="loginContent">
+        <div class="flex items-start justify-between gap-4 mb-6">
+          <div>
+            <p class="text-xs uppercase tracking-[0.25em] text-cyan-300">Acceso seguro</p>
+            <h3 class="text-3xl font-black mt-2">Iniciar sesión</h3>
+          </div>
+          <button type="button" onclick="closeLoginModal()" class="text-zinc-400 hover:text-red-400 text-3xl leading-none">&times;</button>
+        </div>
+
+        <div class="space-y-4">
+          <div>
+            <label for="email" class="block text-sm font-semibold mb-2">Correo</label>
+            <input id="email" type="email" autocomplete="email" class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-cyan-400/50" placeholder="correo@ejemplo.com" />
+          </div>
+          <div>
+            <label for="password" class="block text-sm font-semibold mb-2">Contraseña</label>
+            <input id="password" type="password" autocomplete="current-password" class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-cyan-400/50" placeholder="••••••••" />
+          </div>
+        </div>
+
+        <p id="loginError" class="text-red-400 text-sm mt-4 min-h-[20px]"></p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+          <button type="button" onclick="closeLoginModal()" class="btn-secondary w-full">Cancelar</button>
+          <button type="button" onclick="login()" class="btn-primary w-full">Entrar</button>
+        </div>
+      </div>
+
+      <div id="loginSuccessBox" class="hidden text-center py-6">
+        <div class="text-5xl mb-4">✅</div>
+        <h4 class="text-2xl font-bold">Bienvenido <span id="loginSuccessName">Alumno</span></h4>
+        <p class="text-zinc-400 mt-3">Redirigiendo al panel correcto...</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="inscripcionModal" class="hidden fixed inset-0 z-[90] items-center justify-center bg-black/70 px-4">
+    <div class="w-full max-w-2xl rounded-[2rem] border border-cyan-400/20 bg-slate-950/95 p-6 sm:p-7 shadow-2xl modal-anim">
+      <div class="flex items-start justify-between gap-4 mb-6">
+        <div>
+          <p class="text-xs uppercase tracking-[0.25em] text-cyan-300">Solicitud</p>
+          <h3 class="text-3xl font-black mt-2">Inscripción</h3>
+        </div>
+        <button type="button" onclick="closeInscripcionModal()" class="text-zinc-400 hover:text-red-400 text-3xl leading-none">&times;</button>
+      </div>
+
+      <form id="inscripcionForm" class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label for="nombre" class="block text-sm font-semibold mb-2">Nombre</label>
+          <input id="nombre" name="nombre" type="text" required class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-cyan-400/50" placeholder="Tu nombre" />
+        </div>
+        <div>
+          <label for="correo" class="block text-sm font-semibold mb-2">Correo</label>
+          <input id="correo" name="correo" type="email" required class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-cyan-400/50" placeholder="tucorreo@ejemplo.com" />
+        </div>
+        <div>
+          <label for="curso" class="block text-sm font-semibold mb-2">Curso</label>
+          <select id="curso" name="curso" class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-cyan-400/50">
+            <option value="Desarrollo Web">Desarrollo Web</option>
+            <option value="Inteligencia Artificial">Inteligencia Artificial</option>
+            <option value="Ciberseguridad">Ciberseguridad</option>
+          </select>
+        </div>
+        <div>
+          <label for="edad" class="block text-sm font-semibold mb-2">Edad</label>
+          <input id="edad" name="edad" type="number" min="1" max="100" inputmode="numeric" class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-cyan-400/50" placeholder="Edad" />
+        </div>
+        <div class="sm:col-span-2">
+          <label for="mensaje" class="block text-sm font-semibold mb-2">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 outline-none focus:border-cyan-400/50" placeholder="Cuéntanos qué te gustaría aprender"></textarea>
+        </div>
+        <div class="sm:col-span-2 flex flex-col sm:flex-row gap-3 pt-2">
+          <button type="button" onclick="closeInscripcionModal()" class="btn-secondary">Cerrar</button>
+          <button type="submit" class="btn-primary">Enviar solicitud</button>
+        </div>
+        <p id="inscripcionStatus" class="sm:col-span-2 text-sm text-zinc-400 min-h-[20px]"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<!-- Tu config -->
+<script src="firebase-config.js"></script>
+
+<!-- Tu lógica -->
+<script src="app.js"></script>
+
+</body>
+</html>

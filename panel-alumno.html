@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Alumno • InfoTechVC</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="panel-student-body text-white">
+  <div class="student-panel-bg"></div>
+
+  <nav class="student-nav sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="student-brand-icon">⚡</div>
+        <div class="min-w-0">
+          <p class="text-[11px] uppercase tracking-[0.35em] text-cyan-300/80">InfoTechVC</p>
+          <h1 class="logo-font text-2xl sm:text-3xl font-bold text-white leading-none">Panel Alumno</h1>
+        </div>
+      </div>
+
+      <button onclick="logout()" class="student-logout-btn">
+        Cerrar sesión
+      </button>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 relative z-10">
+    <section class="student-hero-card mb-8 sm:mb-10">
+      <div class="grid lg:grid-cols-[1.35fr_0.9fr] gap-8 items-center">
+        <div>
+          <span class="student-hero-badge">Panel Propio</span>
+          <h2 id="saludoAlumno" class="student-hero-title mt-4">Bienvenido 👋</h2>
+          <p class="student-hero-subtitle mt-4">
+            Continúa tu avance, revisa tus métricas y entra directo a tus rutas de aprendizaje.
+          </p>
+
+          <div class="student-hero-mini mt-6">
+            <div class="student-mini-card">
+              <span class="student-mini-label">Ruta principal</span>
+              <strong id="cursoHero">Cargando...</strong>
+            </div>
+            <div class="student-mini-card">
+              <span class="student-mini-label">Nivel actual</span>
+              <strong id="nivelHero">Cargando...</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="student-overview-card">
+          <div class="student-overview-top">
+            <span>Progreso total</span>
+            <strong id="progresoAlumno">0%</strong>
+          </div>
+
+          <div class="student-progress-shell mb-4">
+            <div id="barraProgresoGeneral" class="student-progress-fill" style="width: 0%;"></div>
+          </div>
+
+          <div class="student-overview-stats">
+            <div>
+              <p>Meta</p>
+              <strong>100%</strong>
+            </div>
+            <div>
+              <p>Estado</p>
+              <strong id="estadoAlumno">Iniciando</strong>
+            </div>
+            <div>
+              <p>Cuenta</p>
+              <strong id="correoAlumno">Cargando...</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-2 xl:grid-cols-4 gap-5 mb-8 sm:mb-10">
+      <article class="student-stat-card">
+        <span class="student-stat-label">Curso activo</span>
+        <h3 id="cursoAlumno" class="student-stat-value text-cyan-300">Cargando...</h3>
+      </article>
+
+      <article class="student-stat-card">
+        <span class="student-stat-label">Nivel</span>
+        <h3 id="nivelAlumno" class="student-stat-value">Cargando...</h3>
+      </article>
+
+      <article class="student-stat-card">
+        <span class="student-stat-label">Progreso Web</span>
+        <h3 id="textoProgresoWeb" class="student-stat-value">0%</h3>
+      </article>
+
+      <article class="student-stat-card">
+        <span class="student-stat-label">Ritmo</span>
+        <h3 id="ritmoAlumno" class="student-stat-value text-emerald-300">Constante</h3>
+      </article>
+    </section>
+
+    <section class="grid xl:grid-cols-[1.45fr_0.95fr] gap-6">
+      <div class="student-panel-card">
+        <div class="student-section-head">
+          <div>
+            <span class="student-section-tag">Rutas disponibles</span>
+            <h3 class="student-section-title">Tus cursos</h3>
+            <p class="student-section-subtitle">Accesos rápidos, progreso visual y estado de cada ruta.</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-1 gap-5">
+          <article class="student-course-card student-course-card--active">
+            <div class="student-course-visual from-cyan-500 to-blue-600">💻</div>
+            <div class="student-course-body">
+              <div class="student-course-top">
+                <div>
+                  <h4>Desarrollo Web</h4>
+                  <p>HTML, CSS, JS, React y proyectos reales</p>
+                </div>
+                <span class="student-status-badge student-status-badge--active">Activo</span>
+              </div>
+
+              <div class="student-progress-meta">
+                <span>Progreso del curso</span>
+                <strong id="textoProgresoWebCard">0%</strong>
+              </div>
+              <div class="student-progress-shell student-progress-shell--sm">
+                <div id="barraProgresoWeb" class="student-progress-fill" style="width: 0%;"></div>
+              </div>
+
+              <div class="student-course-actions mt-5">
+                <a href="curso-web.html" class="btn-primary w-full text-center block">Entrar al curso →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="student-course-card">
+            <div class="student-course-visual from-purple-500 to-pink-600">🤖</div>
+            <div class="student-course-body">
+              <div class="student-course-top">
+                <div>
+                  <h4>Inteligencia Artificial</h4>
+                  <p>Machine Learning, IA y automatización</p>
+                </div>
+                <span id="badgeIA" class="student-status-badge student-status-badge--locked">Próximamente</span>
+              </div>
+
+              <div class="student-progress-meta">
+                <span>Ruta IA</span>
+                <strong id="textoProgresoIA">0%</strong>
+              </div>
+              <div class="student-progress-shell student-progress-shell--sm">
+                <div id="barraProgresoIA" class="student-progress-fill student-progress-fill--violet" style="width: 0%;"></div>
+              </div>
+
+              <div class="student-course-actions mt-5">
+                <a href="curso-ia.html" id="btnIA" class="btn-secondary w-full text-center block">Ver ruta IA</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="student-course-card">
+            <div class="student-course-visual from-emerald-500 to-green-600">🔐</div>
+            <div class="student-course-body">
+              <div class="student-course-top">
+                <div>
+                  <h4>Ciberseguridad</h4>
+                  <p>Pentesting, redes y hacking ético</p>
+                </div>
+                <span id="badgeCiber" class="student-status-badge student-status-badge--locked">Próximamente</span>
+              </div>
+
+              <div class="student-progress-meta">
+                <span>Ruta Ciber</span>
+                <strong id="textoProgresoCiber">0%</strong>
+              </div>
+              <div class="student-progress-shell student-progress-shell--sm">
+                <div id="barraProgresoCiber" class="student-progress-fill student-progress-fill--green" style="width: 0%;"></div>
+              </div>
+
+              <div class="student-course-actions mt-5">
+                <a href="curso-ciber.html" id="btnCiber" class="btn-secondary w-full text-center block">Ver ruta Ciber</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <aside class="student-side-stack">
+        <section class="student-panel-card">
+          <div class="student-section-head mb-5">
+            <div>
+              <span class="student-section-tag">Resumen rápido</span>
+              <h3 class="student-section-title">Tu cuenta</h3>
+            </div>
+          </div>
+
+          <div class="student-account-list">
+            <div class="student-account-row">
+              <span>Correo</span>
+              <strong id="correoAlumnoCard">Cargando...</strong>
+            </div>
+            <div class="student-account-row">
+              <span>Curso principal</span>
+              <strong id="cursoAlumnoCard">Cargando...</strong>
+            </div>
+            <div class="student-account-row">
+              <span>Nivel</span>
+              <strong id="nivelAlumnoCard">Cargando...</strong>
+            </div>
+            <div class="student-account-row">
+              <span>Progreso general</span>
+              <strong id="progresoAlumnoCard">0%</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="student-panel-card">
+          <div class="student-section-head mb-5">
+            <div>
+              <span class="student-section-tag">Impulso</span>
+              <h3 class="student-section-title">Siguiente paso</h3>
+              <p class="student-section-subtitle">Avanza en tu ruta principal para desbloquear más progreso.</p>
+            </div>
+          </div>
+
+          <div class="student-next-step">
+            <div class="student-next-icon">🚀</div>
+            <div>
+              <h4 id="siguientePasoTitulo">Completa tu siguiente módulo</h4>
+              <p id="siguientePasoTexto">Cuando avances en Desarrollo Web, tu dashboard se actualizará automáticamente.</p>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="panel.js"></script>
+</body>
+</html>

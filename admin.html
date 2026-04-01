@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InfoTechVC • Panel Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="brand-badge">IT</div>
+        <div>
+          <h1>InfoTechVC • Panel Admin</h1>
+          <p>Gestión de solicitudes, alumnos y profesores</p>
+        </div>
+      </div>
+
+      <div class="actions-head">
+        <div class="presence">
+          <span id="networkStatusDot" class="presence-dot"></span>
+          <span id="networkStatusText">Online</span>
+        </div>
+        <button class="btn btn-danger" onclick="logout()">Cerrar sesión</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <section class="hero">
+        <div class="hero-card">
+          <h2>Bienvenido, <span id="adminName">Profesor</span></h2>
+          <p>Solución administrativa diseñada para optimizar la gestión de solicitudes, usuarios, roles y seguimiento académico en un entorno profesional.</p>
+          <div id="appStatus" class="status-box">Panel de administración premium. Diseñado para gestionar la operación educativa con orden, rapidez y escalabilidad.</div>
+        </div>
+      </section>
+
+      <section class="metrics">
+        <div class="metric"><span class="label">Solicitudes</span><strong id="totalSolicitudes">0</strong></div>
+        <div class="metric"><span class="label">Profesores</span><strong id="totalProfesores">0</strong></div>
+        <div class="metric"><span class="label">Alumnos</span><strong id="totalAlumnos">0</strong></div>
+        <div class="metric"><span class="label">Promedio progreso</span><strong id="promedioProgreso">0%</strong></div>
+      </section>
+
+      <div class="searchbar">
+        <input id="buscador" class="input" type="text" placeholder="Buscar por nombre, correo, curso, nivel o rol" oninput="filtrarUsuarios()" />
+        <div class="metric" style="min-width:220px"><span class="label">Curso más repetido</span><strong id="cursoTop">-</strong></div>
+      </div>
+
+      <section class="section-card">
+        <div class="section-head">
+          <h3>Solicitudes pendientes</h3>
+          <span class="theme-muted">Aprobación directa a alumnos</span>
+        </div>
+        <div id="listaSolicitudes" class="list-grid"></div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-head">
+          <h3>Profesores</h3>
+          <span class="theme-muted">Usuarios con rol admin</span>
+        </div>
+        <div id="listaProfesores" class="list-grid"></div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-head">
+          <h3>Alumnos</h3>
+          <span class="theme-muted">Control de progreso y roles</span>
+        </div>
+        <div id="listaAlumnos" class="list-grid"></div>
+      </section>
+
+      <p class="footer-note">Entorno administrativo conectado a Firebase con control centralizado de usuarios, solicitudes y progreso.</p>
+    </div>
+  </main>
+  <div id="progressModal" class="admin-modal hidden">
+    <div class="admin-modal-backdrop" onclick="closeProgressModal()"></div>
+    <div class="admin-modal-card">
+      <div class="admin-modal-icon">📈</div>
+      <p class="admin-modal-kicker">Gestión académica</p>
+      <h3 class="admin-modal-title">Editar progreso</h3>
+      <p class="admin-modal-text" id="progressModalUser">Actualiza el avance del alumno.</p>
+      <div style="display:grid; gap:12px; margin-top:18px;">
+        <input id="progressWeb" class="admin-modal-input" type="number" min="0" max="100" placeholder="Progreso Web (0-100)" />
+        <input id="progressIA" class="admin-modal-input" type="number" min="0" max="100" placeholder="Progreso IA (0-100)" />
+        <input id="progressCiber" class="admin-modal-input" type="number" min="0" max="100" placeholder="Progreso Ciber (0-100)" />
+      </div>
+      <div class="admin-modal-actions">
+        <button class="admin-modal-btn admin-modal-btn-secondary" onclick="closeProgressModal()">Cancelar</button>
+        <button class="admin-modal-btn admin-modal-btn-primary" onclick="saveProgressModal()">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="deleteModal" class="admin-modal hidden">
+    <div class="admin-modal-backdrop" onclick="closeDeleteModal()"></div>
+    <div class="admin-modal-card">
+      <div class="admin-modal-icon">🗑️</div>
+      <p class="admin-modal-kicker">Gestión de usuarios</p>
+      <h3 class="admin-modal-title">Eliminar usuario</h3>
+      <p class="admin-modal-text" id="deleteModalText">¿Seguro que quieres eliminar este usuario?</p>
+      <div class="admin-modal-actions">
+        <button class="admin-modal-btn admin-modal-btn-secondary" onclick="closeDeleteModal()">Cancelar</button>
+        <button class="admin-modal-btn admin-modal-btn-primary" onclick="confirmDeleteUser()">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

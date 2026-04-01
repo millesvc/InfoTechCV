@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso Web • InfoTechVC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="course-page-body course-theme-web text-white">
+  <div class="course-page-glow"></div>
+
+  <nav class="course-nav sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+      <div class="course-brand min-w-0">
+        <div class="course-brand-icon">⚡</div>
+        <div class="min-w-0">
+          <p class="text-[11px] uppercase tracking-[0.35em] text-cyan-300/80">InfoTechVC</p>
+          <h1 class="logo-font text-2xl sm:text-3xl font-bold text-white leading-none">Curso Web</h1>
+        </div>
+      </div>
+
+      <a href="panel-alumno.html" class="course-back-btn">← Volver al panel</a>
+    </div>
+  </nav>
+
+  <main class="course-shell max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+    <section class="course-hero-card mb-8 sm:mb-10">
+      <div class="grid lg:grid-cols-[1.25fr_0.95fr] gap-8 items-stretch relative z-10">
+        <div>
+          <span class="course-badge">Ruta premium • Full Stack</span>
+          <h2 class="course-title">Desarrollo Web <span>Full Stack</span></h2>
+          <p class="course-subtitle">
+            Aprende a construir experiencias modernas con HTML, CSS, JavaScript, React y Next.js. Esta ruta está pensada para que avances con una base sólida, buen diseño visual y proyectos reales para portafolio.
+          </p>
+
+          <div class="course-hero-actions">
+            <a href="#contenido" class="course-primary-btn">Ver módulos →</a>
+            <a href="#progreso" class="course-secondary-btn">Revisar progreso</a>
+          </div>
+
+          <div class="course-stat-grid">
+            <article class="course-stat-card">
+              <span>Módulos</span>
+              <strong>4</strong>
+            </article>
+            <article class="course-stat-card">
+              <span>Duración</span>
+              <strong>42h</strong>
+            </article>
+            <article class="course-stat-card">
+              <span>Nivel</span>
+              <strong>Pro</strong>
+            </article>
+            <article class="course-stat-card">
+              <span>Formato</span>
+              <strong>Online</strong>
+            </article>
+          </div>
+        </div>
+
+        <div class="course-showcase">
+          <div class="course-showcase-shell">
+            <div>
+              <div class="course-showcase-icon">💻</div>
+              <span class="course-showcase-label">Ruta principal</span>
+              <h3 class="course-showcase-title">Frontend, lógica y despliegue real</h3>
+              <p class="course-showcase-text">
+                Domina estructura, diseño responsive, interacción con el DOM y frameworks modernos para lanzar proyectos completos con estilo profesional.
+              </p>
+            </div>
+
+            <div class="course-highlight-list">
+              <div class="course-highlight-item"><span class="course-highlight-dot"></span><span>Diseño responsive y UI moderna</span></div>
+              <div class="course-highlight-item"><span class="course-highlight-dot"></span><span>JavaScript dinámico y componentes</span></div>
+              <div class="course-highlight-item"><span class="course-highlight-dot"></span><span>Proyectos listos para portafolio</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="progreso" class="course-panel-card mb-8 sm:mb-10">
+      <span class="course-section-tag">Seguimiento</span>
+      <h3 class="course-section-title">Tu avance en la ruta web</h3>
+      <p class="course-section-subtitle">
+        Todo tu progreso queda guardado automáticamente para que sigas desde el mismo punto cuando vuelvas a entrar.
+      </p>
+
+      <div class="course-progress-wrap">
+        <div class="course-progress-primary">
+          <span class="course-progress-kicker">Progreso actual</span>
+          <strong id="textoProgreso" class="course-progress-value">0%</strong>
+          <div class="course-progress-shell">
+            <div id="barraCurso" class="course-progress-fill" style="width: 0%;"></div>
+          </div>
+          <p class="course-progress-note">Completa módulos en orden para mantener una base sólida y ver tu evolución real dentro del dashboard.</p>
+        </div>
+
+        <div class="course-progress-side">
+          <span class="course-side-label">Estado de la ruta</span>
+          <div class="course-side-grid">
+            <div class="course-side-row">
+              <span>Ruta</span>
+              <strong>Desarrollo Web</strong>
+            </div>
+            <div class="course-side-row">
+              <span>Meta final</span>
+              <strong>100%</strong>
+            </div>
+            <div class="course-side-row">
+              <span>Resultado</span>
+              <strong>Proyecto deployado</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contenido" class="course-content-grid mb-8 sm:mb-10">
+      <div class="course-panel-card">
+        <span class="course-section-tag">Contenido</span>
+        <h3 class="course-section-title">Módulos de la ruta</h3>
+        <p class="course-section-subtitle">Cada bloque fue pensado para avanzar de lo esencial a lo profesional sin saltos raros.</p>
+
+        <div class="course-modules-grid">
+          <article class="course-module-card">
+            <div class="course-module-top">
+              <span class="course-module-pill">Módulo 1</span>
+              <span class="course-module-step">15%</span>
+            </div>
+            <h4 class="course-module-title">HTML y estructura semántica</h4>
+            <p class="course-module-text">Aprende bases sólidas, organización del documento, etiquetas clave y buenas prácticas para construir interfaces bien hechas desde cero.</p>
+            <div class="course-module-meta">
+              <span>Semántica</span>
+              <span>Estructura</span>
+              <span>Buenas prácticas</span>
+            </div>
+            <div class="course-module-action">
+              <button onclick="guardarProgreso(15)" class="course-module-btn">Completar módulo</button>
+            </div>
+          </article>
+
+          <article class="course-module-card">
+            <div class="course-module-top">
+              <span class="course-module-pill">Módulo 2</span>
+              <span class="course-module-step">35%</span>
+            </div>
+            <h4 class="course-module-title">CSS y diseño visual moderno</h4>
+            <p class="course-module-text">Domina responsive design, Flexbox, Grid, jerarquía visual, hover states y animaciones limpias para que tu web se vea profesional.</p>
+            <div class="course-module-meta">
+              <span>Responsive</span>
+              <span>Animaciones</span>
+              <span>UI</span>
+            </div>
+            <div class="course-module-action">
+              <button onclick="guardarProgreso(35)" class="course-module-btn">Completar módulo</button>
+            </div>
+          </article>
+
+          <article class="course-module-card">
+            <div class="course-module-top">
+              <span class="course-module-pill">Módulo 3</span>
+              <span class="course-module-step">60%</span>
+            </div>
+            <h4 class="course-module-title">JavaScript moderno y DOM</h4>
+            <p class="course-module-text">Eventos, funciones, arrays, manipulación del DOM y lógica interactiva para convertir una página estática en una experiencia viva.</p>
+            <div class="course-module-meta">
+              <span>DOM</span>
+              <span>Lógica</span>
+              <span>Interacción</span>
+            </div>
+            <div class="course-module-action">
+              <button onclick="guardarProgreso(60)" class="course-module-btn">Completar módulo</button>
+            </div>
+          </article>
+
+          <article class="course-module-card">
+            <div class="course-module-top">
+              <span class="course-module-pill">Módulo 4</span>
+              <span class="course-module-step">100%</span>
+            </div>
+            <h4 class="course-module-title">React, Next.js y despliegue</h4>
+            <p class="course-module-text">Entra a un stack moderno con componentes, arquitectura escalable y publicación de un proyecto listo para mostrar y vender.</p>
+            <div class="course-module-meta">
+              <span>React</span>
+              <span>Next.js</span>
+              <span>Deploy</span>
+            </div>
+            <div class="course-module-action">
+              <button onclick="guardarProgreso(100)" class="course-module-btn">Finalizar ruta</button>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <aside class="course-focus-card">
+        <span class="course-focus-kicker">Enfoque premium</span>
+        <h3>Qué vas a dominar</h3>
+        <p>Esta ruta no solo enseña código. Te ayuda a construir una base real para crear páginas vendibles, paneles, landing pages y proyectos con estética fuerte.</p>
+
+        <ul class="course-focus-list">
+          <li>Construcción de interfaces limpias y profesionales.</li>
+          <li>Separación correcta entre HTML, CSS y JavaScript.</li>
+          <li>Experiencia responsive para desktop y móvil.</li>
+          <li>Proyecto final listo para publicar y mostrar.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="course-final-card">
+      <h3>Sigue avanzando y haz que tu dashboard brille más</h3>
+      <p>
+        Cada módulo completado actualiza tu panel automáticamente. Mientras más avances, más sólida se verá tu ruta y mejor quedará tu progreso general dentro de InfoTechVC.
+      </p>
+      <div class="course-final-actions">
+        <a href="panel-alumno.html" class="course-secondary-btn">Volver al panel</a>
+        <a href="#contenido" class="course-primary-btn">Seguir con la ruta →</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="curso-web.js"></script>
+</body>
+</html>

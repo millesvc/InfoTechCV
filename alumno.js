@@ -1,0 +1,1 @@
+// Integrado en panel.js
