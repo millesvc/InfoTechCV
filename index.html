@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="bg-slate-950 text-white">
-  <div class="hero-bg relative overflow-hidden">
+  <div class="hero-bg min-h-screen sm:min-h-screen relative overflow-hidden">
     <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/75 backdrop-blur-xl">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
 
@@ -69,121 +69,129 @@
 </header>
 
 <main>
-      <section id="inicio" class="max-w-7xl mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-14 sm:pb-20 relative z-10">
-        <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
-  
-  <!-- HERO SOLO MOBILE -->
-  <div class="mobile-hero sm:hidden text-center py-10">
-    <h2 class="text-4xl font-black leading-tight">
+      <section id="inicio" class="max-w-7xl mx-auto px-4 sm:px-6 pt-10 sm:pt-20 pb-12 sm:pb-20 relative z-10">
+  <!-- HERO MOBILE -->
+  <div class="sm:hidden text-center flex flex-col justify-center min-h-[70vh]">
+    <p class="text-cyan-300 uppercase tracking-[0.3em] text-xs font-bold">
+      Comienza ahora
+    </p>
+
+    <h2 class="section-title text-5xl font-black leading-tight mt-5">
       Aprende desarrollo web desde cero
     </h2>
-    <p class="text-zinc-300 text-lg mt-5">
+
+    <p class="text-zinc-300 text-lg leading-8 mt-5">
       Plataforma moderna con proyectos reales
     </p>
 
-    <a href="#cursos" class="btn-primary inline-block mt-8">
-      🚀 Ver cursos
-    </a>
+    <div class="mt-8">
+      <a href="#cursos" class="btn-primary inline-flex items-center justify-center px-8 py-4">
+        🚀 Ver cursos
+      </a>
+    </div>
   </div>
 
-  <!-- HERO DESKTOP / TABLET -->
-  <div class="hidden sm:block">
-    <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 text-cyan-300 text-sm font-semibold fade-up">
-              SaaS educativo • Escalable • Producción-ready
-            </span>
-            <h2 class="section-title text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.95] mt-6 fade-up delay-1">
-              Plataforma de aprendizaje en informática diseñada para escalar.
-            </h2>
-            <p class="text-zinc-300 text-lg sm:text-xl leading-8 max-w-2xl mt-6 fade-up delay-2">
-              Plataforma educativa de informática con acceso por roles, progreso persistente y una experiencia moderna pensada para alumnos, formación digital y crecimiento escalable.
-            </p>
+  <!-- HERO DESKTOP -->
+  <div class="hidden sm:grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
+    <div>
+      <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 text-cyan-300 text-sm font-semibold fade-up">
+        SaaS educativo • Escalable • Producción-ready
+      </span>
 
-            <p class="text-cyan-400 text-sm mt-4 font-semibold fade-up delay-2">
-              Stack: HTML • CSS • JavaScript • Firebase • Responsive UI
-            </p>
+      <h2 class="section-title text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.95] mt-6 fade-up delay-1">
+        Plataforma de aprendizaje en informática diseñada para escalar.
+      </h2>
 
-            <p class="text-emerald-400 text-sm mt-2 font-semibold fade-up delay-2">
-              +120 alumnos activos • Acceso limitado
-            </p>
+      <p class="text-zinc-300 text-lg sm:text-xl leading-8 max-w-2xl mt-6 fade-up delay-2">
+        Plataforma educativa de informática con acceso por roles, progreso persistente y una experiencia moderna pensada para alumnos, formación digital y crecimiento escalable.
+      </p>
 
-            <p class="text-zinc-400 text-sm mt-2 fade-up delay-2">
-              Plataforma en desarrollo activo • Versión Beta
-            </p>
+      <p class="text-cyan-400 text-sm mt-4 font-semibold fade-up delay-2">
+        Stack: HTML • CSS • JavaScript • Firebase • Responsive UI
+      </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 mt-8 fade-up delay-3">
-              <button type="button" onclick="openLoginModal()" class="btn-primary text-center">Entrar ahora</button>
-              <button type="button" onclick="openInscripcionModal()" class="btn-secondary text-center">Solicitar inscripción</button>
+      <p class="text-emerald-400 text-sm mt-2 font-semibold fade-up delay-2">
+        +120 alumnos activos • Acceso limitado
+      </p>
+
+      <p class="text-zinc-400 text-sm mt-2 fade-up delay-2">
+        Plataforma en desarrollo activo • Versión Beta
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 mt-8 fade-up delay-3">
+        <button type="button" onclick="openLoginModal()" class="btn-primary text-center">Entrar ahora</button>
+        <button type="button" onclick="openInscripcionModal()" class="btn-secondary text-center">Solicitar inscripción</button>
+      </div>
+
+      <div class="stats fade-up delay-3">
+        <div class="stat-card">
+          <div class="icon">⚙️</div>
+          <h2>3+</h2>
+          <p>Módulos activos</p>
+        </div>
+        <div class="stat-card">
+          <div class="icon">📈</div>
+          <h2>100%</h2>
+          <p>Escalable</p>
+        </div>
+        <div class="stat-card">
+          <div class="icon">🔐</div>
+          <h2>Secure</h2>
+          <p>Acceso protegido</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-left">
+      <div class="rounded-[2rem] border border-white/10 bg-black/30 backdrop-blur-xl p-5 sm:p-6 shadow-2xl">
+        <div class="rounded-[1.5rem] border border-cyan-400/10 bg-slate-950/80 p-5 sm:p-6">
+          <div class="flex items-center justify-between gap-3 mb-6">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-cyan-300/70">Vista previa</p>
+              <h3 class="text-2xl font-bold">Ecosistema InfoTechVC</h3>
             </div>
-            
-            <div class="stats fade-up delay-3">
-              <div class="stat-card">
-                <div class="icon">⚙️</div>
-                <h2>3+</h2>
-                <p>Módulos activos</p>
-              </div>
-              <div class="stat-card">
-                <div class="icon">📈</div>
-                <h2>100%</h2>
-                <p>Escalable</p>
-              </div>
-              <div class="stat-card">
-                <div class="icon">🔐</div>
-                <h2>Secure</h2>
-                <p>Acceso protegido</p>
-              </div>
-            </div>
+            <span class="px-3 py-1 rounded-full bg-emerald-400/10 border border-emerald-400/20 text-emerald-300 text-xs font-bold">ONLINE</span>
           </div>
 
-          <div class="hidden sm:block fade-left">
-            <div class="rounded-[2rem] border border-white/10 bg-black/30 backdrop-blur-xl p-5 sm:p-6 shadow-2xl">
-              <div class="rounded-[1.5rem] border border-cyan-400/10 bg-slate-950/80 p-5 sm:p-6">
-                <div class="flex items-center justify-between gap-3 mb-6">
-                  <div>
-                    <p class="text-xs uppercase tracking-[0.3em] text-cyan-300/70">Vista previa</p>
-                    <h3 class="text-2xl font-bold">Ecosistema InfoTechVC</h3>
-                  </div>
-                  <span class="px-3 py-1 rounded-full bg-emerald-400/10 border border-emerald-400/20 text-emerald-300 text-xs font-bold">ONLINE</span>
+          <div class="grid gap-4">
+            <div class="feature-card rounded-3xl p-5">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm text-cyan-300">Acceso seguro</p>
+                  <h4 class="text-xl font-bold mt-1">Login conectado a Firebase</h4>
+                  <p class="text-zinc-400 mt-2">Profesores y alumnos entran a su panel correcto según rol.</p>
                 </div>
+                <div class="feature-icon text-3xl">🔐</div>
+              </div>
+            </div>
 
-                <div class="grid gap-4">
-                  <div class="feature-card rounded-3xl p-5">
-                    <div class="flex items-start justify-between gap-4">
-                      <div>
-                        <p class="text-sm text-cyan-300">Acceso seguro</p>
-                        <h4 class="text-xl font-bold mt-1">Login conectado a Firebase</h4>
-                        <p class="text-zinc-400 mt-2">Profesores y alumnos entran a su panel correcto según rol.</p>
-                      </div>
-                      <div class="feature-icon text-3xl">🔐</div>
-                    </div>
-                  </div>
-
-                  <div class="feature-card rounded-3xl p-5">
-                    <div class="flex items-start justify-between gap-4">
-                      <div>
-                        <p class="text-sm text-violet-300">Rutas</p>
-                        <h4 class="text-xl font-bold mt-1">Cursos con progreso guardado</h4>
-                        <p class="text-zinc-400 mt-2">Web, IA y Ciberseguridad con avance persistente.</p>
-                      </div>
-                      <div class="feature-icon text-3xl">🚀</div>
-                    </div>
-                  </div>
-
-                  <div class="feature-card rounded-3xl p-5">
-                    <div class="flex items-start justify-between gap-4">
-                      <div>
-                        <p class="text-sm text-emerald-300">Responsive</p>
-                        <h4 class="text-xl font-bold mt-1">Diseño sólido en celular</h4>
-                        <p class="text-zinc-400 mt-2">Botones, navbar y modales listos para touch.</p>
-                      </div>
-                      <div class="feature-icon text-3xl">📲</div>
-                    </div>
-                  </div>
+            <div class="feature-card rounded-3xl p-5">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm text-violet-300">Rutas</p>
+                  <h4 class="text-xl font-bold mt-1">Cursos con progreso guardado</h4>
+                  <p class="text-zinc-400 mt-2">Web, IA y Ciberseguridad con avance persistente.</p>
                 </div>
+                <div class="feature-icon text-3xl">🚀</div>
+              </div>
+            </div>
+
+            <div class="feature-card rounded-3xl p-5">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm text-emerald-300">Responsive</p>
+                  <h4 class="text-xl font-bold mt-1">Diseño sólido en celular</h4>
+                  <p class="text-zinc-400 mt-2">Botones, navbar y modales listos para touch.</p>
+                </div>
+                <div class="feature-icon text-3xl">📲</div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section id="cursos" class="section-bg py-16 sm:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">

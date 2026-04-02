@@ -3607,31 +3607,6 @@ footer {
   10% { transform: translateX(2px); }
   15% { transform: translateX(0); }
 }
-.mobile-hero {
-  text-align: center;
-  padding: 40px 20px;
-  color: white;
-}
-
-.mobile-hero h2 {
-  font-size: 1.6rem;
-  font-weight: bold;
-}
-
-.mobile-hero p {
-  margin-top: 10px;
-  opacity: 0.8;
-}
-
-.btn-mobile {
-  display: inline-block;
-  margin-top: 20px;
-  background: #0ea5e9;
-  padding: 12px 25px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: white;
-}
 @media (max-width: 768px) {
   #inicio .fade-up,
   #inicio .fade-left,
@@ -3643,8 +3618,4 @@ footer {
     transform: none !important;
     transition: none !important;
   }
-}
-.mobile-hero {
-  max-width: 680px;
-  margin: 0 auto;
 }
