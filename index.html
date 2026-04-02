@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="bg-slate-950 text-white">
-  <div class="hero-bg min-h-[70vh] sm:min-h-screen relative overflow-hidden">
+  <div class="hero-bg relative overflow-hidden">
     <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/75 backdrop-blur-xl">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
 
@@ -71,19 +71,24 @@
 <main>
       <section id="inicio" class="max-w-7xl mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-14 sm:pb-20 relative z-10">
         <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
-          <div class="hidden sm:block">
+  
+  <!-- HERO SOLO MOBILE -->
+  <div class="mobile-hero sm:hidden text-center py-10">
+    <h2 class="text-4xl font-black leading-tight">
+      Aprende desarrollo web desde cero
+    </h2>
+    <p class="text-zinc-300 text-lg mt-5">
+      Plataforma moderna con proyectos reales
+    </p>
 
-            <!-- MOBILE HERO EXTRA -->
-<div class="mobile-hero block sm:hidden -mt-16">
-  <h2>Aprende desarrollo web desde cero</h2>
-  <p>Plataforma moderna con proyectos reales</p>
+    <a href="#cursos" class="btn-primary inline-block mt-8">
+      🚀 Ver cursos
+    </a>
+  </div>
 
-  <a href="#cursos" class="btn-mobile">
-    🚀 Ver cursos
-  </a>
-</div>
-
-            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 text-cyan-300 text-sm font-semibold fade-up">
+  <!-- HERO DESKTOP / TABLET -->
+  <div class="hidden sm:block">
+    <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 text-cyan-300 text-sm font-semibold fade-up">
               SaaS educativo • Escalable • Producción-ready
             </span>
             <h2 class="section-title text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.95] mt-6 fade-up delay-1">
@@ -129,7 +134,7 @@
             </div>
           </div>
 
-          <div class="fade-left">
+          <div class="hidden sm:block fade-left">
             <div class="rounded-[2rem] border border-white/10 bg-black/30 backdrop-blur-xl p-5 sm:p-6 shadow-2xl">
               <div class="rounded-[1.5rem] border border-cyan-400/10 bg-slate-950/80 p-5 sm:p-6">
                 <div class="flex items-center justify-between gap-3 mb-6">

@@ -3644,3 +3644,7 @@ footer {
     transition: none !important;
   }
 }
+.mobile-hero {
+  max-width: 680px;
+  margin: 0 auto;
+}
