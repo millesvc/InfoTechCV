@@ -301,3 +301,36 @@ window.openInscripcionModal = openInscripcionModal;
 window.closeInscripcionModal = closeInscripcionModal;
 window.login = login;
 window.goToCurso = goToCurso;
+
+function actualizarEstadoSoporte() {
+  const estado = document.getElementById("estado-soporte");
+  const boton = document.querySelector("#soporte a");
+  if (!estado) return;
+
+  const ahoraChile = new Date();
+  const hora = parseInt(
+    ahoraChile.toLocaleString("es-CL", {
+      timeZone: "America/Santiago",
+      hour: "2-digit",
+      hour12: false,
+    })
+  );
+
+  console.log("Hora Chile:", hora);
+
+  if (hora >= 10 && hora < 20) {
+    estado.innerHTML = "🟢 Soporte en línea";
+    estado.className = "mt-3 text-green-400 font-semibold";
+    if (boton) boton.innerHTML = "💬 Soporte WhatsApp";
+  } else if (hora >= 8 && hora < 10) {
+    estado.innerHTML = "🟡 Respondemos pronto";
+    estado.className = "mt-3 text-yellow-400 font-semibold";
+    if (boton) boton.innerHTML = "💬 Escríbenos por WhatsApp";
+  } else {
+    estado.innerHTML = "🔴 Estamos fuera de horario, pero puedes escribirnos";
+    estado.className = "mt-3 text-red-400 font-semibold";
+    if (boton) boton.innerHTML = "💬 Dejar mensaje en WhatsApp";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", actualizarEstadoSoporte);
