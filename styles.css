@@ -3619,3 +3619,16 @@ footer {
     transition: none !important;
   }
 }
+@media (max-width: 768px) {
+  #inicio .fade-up,
+  #inicio .fade-left,
+  #inicio .fade-right,
+  #inicio .delay-1,
+  #inicio .delay-2,
+  #inicio .delay-3 {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
